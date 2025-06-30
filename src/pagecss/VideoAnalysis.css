@@ -1,0 +1,120 @@
+.video-analysis-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.video-thumbnail {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.video-piechart {
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+.video-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.video-table th,
+.video-table td {
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+
+
+
+
+
+
+.video-comments {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.video-comments-card {
+  flex: 1 1 300px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.video-comments-card h5 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.video-comments-card ul {
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.video-comments-card li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.video-loading,
+.video-empty {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.video-error {
+  color: red;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.video-error button,
+.video-empty button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+
+.video-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.video-info {
+  flex: 1 1 300px;
+}
+
+.video-piechart {
+  flex: 0 0 300px;
+  max-width: 300px;
+}

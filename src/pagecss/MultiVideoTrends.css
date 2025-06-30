@@ -1,0 +1,64 @@
+.trends-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.trends-title {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.trends-subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.loading-text {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.error-text {
+  color: red;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.chart-container {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.video-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.video-thumbnail-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.5rem;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.video-thumbnail-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.video-thumbnail-title {
+  font-size: 0.95rem;
+  margin: 0.5rem 0;
+}
+
+.video-thumbnail-img {
+  width: 100%;
+  border-radius: 6px;
+}

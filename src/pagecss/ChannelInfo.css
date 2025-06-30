@@ -1,0 +1,320 @@
+/* Container */
+.input-group {
+  display: flex;
+  align-items: center; /* vertically center */
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+/* Search bar input */
+.input-group input[type="text"] {
+  flex: 1;
+  height: 46px; /* SAME height as toggle & button */
+  padding: 0 1rem;
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-group input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+/* Fetch button */
+.input-group button {
+  height: 46px; /* SAME height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
+  background: #033c76;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.input-group button:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+.input-group button:active {
+  transform: translateY(0);
+}
+
+/* Toggle container */
+.toggle-container {
+  position: relative;
+  width: 160px;
+  height: 46px; /* SAME height */
+  flex-shrink: 0;
+  transform: translateY(-40%);
+}
+
+/* Hide checkbox */
+.toggle-container input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  transform: translateY(-50%);
+}
+
+/* Toggle label background */
+.toggle-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+  border-radius: 999px;
+  background: #ffcc70; /* default yellow background */
+  color: #333;
+  font-weight: 600;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  padding: 1 1rem;
+
+}
+
+/* Text inside toggle */
+.toggle-text {
+  flex: 1;
+  text-align: center;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+/* Toggle ball */
+.toggle-ball {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  background: white;
+  border-radius: 50%;
+  left: 08px;
+  right:-6px;
+  top: 4px;
+  
+  transition: transform 0.3s ease, left 0.3s ease;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* When checked - change background and text */
+.toggle-container input:checked + .toggle-label {
+  background: linear-gradient(90deg, #035ba9, #078f96);
+  color: white;
+ 
+}
+
+/* Move ball right when checked */
+.toggle-container input:checked + .toggle-label .toggle-ball {
+  transform: translate(110px);
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Card container */
+.channel-card {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  margin-bottom: 1rem;
+}
+
+/* Profile image on the left */
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 2rem;
+   margin-left: 2rem;
+}
+
+/* Details on the right */
+.channel-details {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Channel name */
+.channel-name {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Subscriber count */
+.subscriber-count {
+  margin-top: 0.4rem;
+  font-size: 1.5rem;
+  color: #555;
+}
+.view-channel-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  padding: 10px 10px;
+  background-color: #cc0000;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 1.3rem; /* 1rem is usually ~16px, more balanced */
+  font-weight: 600;
+  min-width: 140px; /* ensures consistent button width */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.view-channel-button:hover {
+  background-color: #e60000;
+  transform: translateY(-1px);
+}
+
+
+
+
+
+.channel-extra-content {
+  margin-top: 2rem;
+}
+
+.channel-extra-content h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+}
+
+.video-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.video-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease;
+}
+
+.video-item:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.video-thumbnail {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.video-details {
+  padding: 0.75rem 1rem;
+  flex: 1;
+}
+
+.video-details p {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.video-details a {
+  display: inline-block;
+  color: #065fd4;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+.video-details a:hover {
+  text-decoration: underline;
+}
+
+.video-item button {
+  margin: 0.75rem 1rem 1rem 1rem;
+  padding: 0.5rem;
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+}
+
+.video-item button:hover {
+  background-color: #8a2020;
+
+
+
+
+}
+
+
+
+
+@media (max-width: 768px) {
+  .channel-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-image {
+    margin: 0 0 1rem 0;
+  }
+
+  .channel-details {
+    display: flex;
+    flex-direction: column; /* ensure vertical stacking */
+    align-items: center;
+    width: 100%; /* let content fill container width */
+  }
+
+  .channel-name {
+    font-size: 2rem;
+    margin-bottom: 0.5rem; /* add spacing below */
+  }
+
+  .subscriber-count {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem; /* add spacing below */
+  }
+
+  .view-channel-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
