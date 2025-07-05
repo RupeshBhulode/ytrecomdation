@@ -1,3 +1,10 @@
+
+# TubeLens Frontend
+
+TubeLens is a web application that helps you **analyze YouTube comments effortlessly**. The frontend, built with **React.js**, provides an intuitive interface to explore video engagement, visualize trends, and display categorized comments in real time.
+
+---
+
 ![Screenshot 2025-07-03 114000](https://github.com/user-attachments/assets/d8457d59-d6b8-4ec3-a44f-8a95bfffde84)
 ![Screenshot 2025-07-03 114020](https://github.com/user-attachments/assets/52cf64df-e2bb-4524-9ee1-19aa3a1ce8f8)
 ![Screenshot 2025-07-03 114033](https://github.com/user-attachments/assets/82edc04f-7af4-4c6f-88b8-ea58812fb9c8)
@@ -10,3 +17,32 @@
 ![Screenshot 2025-07-03 114310](https://github.com/user-attachments/assets/eddbbd53-c022-4a11-9c8f-6e25283b2eff)
 ![Screenshot 2025-07-03 114328](https://github.com/user-attachments/assets/30cb887d-238a-40dc-b8de-98addfec8ba3)
 ![Screenshot 2025-07-03 114349](https://github.com/user-attachments/assets/93b1ee85-22c9-4ee0-bcb2-c7bb46f7c25c)
+
+
+
+## ✨ Features
+
+✅ **Search YouTube videos** by URL or ID  
+✅ **Fetch and display comments** in a clean UI  
+✅ **Show comment categories**:
+- Hate Speech
+- Requests
+- Questions
+- Feedback  
+
+✅ **Visualize trends** with multi-line charts  
+✅ **See most liked comments** grouped by sentiment  
+✅ **View comment activity** over 7 or 30 days  
+✅ **Dark mode / light mode** toggle *(if implemented)*  
+
+---
+
+## 🛠️ Technologies Used
+
+- **React.js** – UI framework
+- **Axios** – HTTP client to communicate with the FastAPI backend
+- **Chart.js / Recharts** – Data visualizations
+- **Material-UI / Tailwind CSS** – Styling and components
+- **YouTube Data API** – Fetching video and channel metadata
+
+---
