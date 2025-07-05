@@ -46,3 +46,62 @@ TubeLens is a web application that helps you **analyze YouTube comments effortle
 - **YouTube Data API** – Fetching video and channel metadata
 
 ---
+
+
+## 🎯 Problems Solved
+
+**Problem 1: Overwhelming Volume of Comments**
+
+> **Challenge:**  
+Popular YouTubers often receive thousands of comments per video, making it nearly impossible to manually read, categorize, and respond effectively.
+
+✅ **How TubeLens Solves It:**  
+Automatically fetches all comments and classifies them into clear categories (Hate Speech, Questions, Requests, Feedback) so creators can focus on what matters most.
+
+---
+
+**Problem 2: Detecting Hate Speech and Toxic Comments**
+
+> **Challenge:**  
+Hate speech or abusive language can damage a creator’s reputation and community health if not addressed promptly.
+
+✅ **How TubeLens Solves It:**  
+Uses machine learning models to **detect and flag hate speech**, allowing creators to moderate quickly and maintain a positive environment.
+
+---
+
+**Problem 3: Missing Audience Requests and Questions**
+
+> **Challenge:**  
+Important questions or requests get buried among general comments, leading to missed opportunities for engagement.
+
+✅ **How TubeLens Solves It:**  
+Highlights comments that are identified as **requests or questions**, helping creators prioritize responses and improve audience satisfaction.
+
+---
+
+**Problem 4: Lack of Insights into Engagement Trends**
+
+> **Challenge:**  
+Creators often don’t have clear visibility into how comment activity changes over time or across videos.
+
+✅ **How TubeLens Solves It:**  
+Provides **visual trends and charts** showing comment volume and categories over 7 or 30 days, empowering data-driven content strategies.
+
+---
+
+**Problem 5: Identifying High-Impact Feedback**
+
+> **Challenge:**  
+Constructive feedback can be scattered among thousands of comments and easily overlooked.
+
+✅ **How TubeLens Solves It:**  
+Filters and surfaces the **most liked feedback comments**, making it easy to understand what resonates with viewers.
+
+---
+
+
+
+
+
+
