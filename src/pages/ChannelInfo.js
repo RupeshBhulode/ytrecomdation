@@ -36,7 +36,7 @@ const ChannelInfo = ({ state, setState, setSelectedSection }) => {
 
   try {
     const response = await fetch(
-      `http://127.0.0.1:8000/channel_info?channel_name=${encodeURIComponent(
+      `https://new-youtube-gygl.onrender.com/channel_info?channel_name=${encodeURIComponent(
         channelName
       )}&is_premium=${isPremium}`
     );
