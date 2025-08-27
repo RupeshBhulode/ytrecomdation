@@ -22,54 +22,57 @@ const ChannelInfo = ({ state, setState, setSelectedSection }) => {
   }, [setState]);
 
   const fetchChannelInfo = async () => {
-    if (!channelName.trim()) {
-      setState((prev) => ({ ...prev, error: "Please enter a channel name." }));
-      return;
-    }
+  if (!channelName.trim()) {
+    setState((prev) => ({ ...prev, error: "Please enter a channel name." }));
+    return;
+  }
 
-    setState((prev) => ({
-      ...prev,
-      loading: true,
-      error: null,
-      channelData: null,
-    }));
+  setState((prev) => ({
+    ...prev,
+    loading: true,
+    error: null,
+    channelData: null,
+  }));
 
-    try {
-      const response = await fetch(
-        `https://new-youtube-gygl.onrender.com/channel_info?channel_name=${encodeURIComponent(
-          channelName
-        )}&is_premium=${isPremium}`
+  try {
+    const response = await fetch(
+      `http://127.0.0.1:8000/channel_info?channel_name=${encodeURIComponent(
+        channelName
+      )}&is_premium=${isPremium}`
+    );
+
+    if (response.status === 429) {
+      // Handle rate limit gracefully
+      throw new Error(
+        "You’ve reached the request limit. Please try again after some time."
       );
-
-      if (!response.ok) {
-        throw new Error(`Error: ${response.status}`);
-      }
-
-      const data = await response.json();
-
-      setState((prev) => {
-        const newState = {
-          ...prev,
-          channelData: data,
-        };
-        localStorage.removeItem("channelInfoState");
-        localStorage.setItem(
-          LOCAL_STORAGE_KEY,
-          JSON.stringify({
-            channelName,
-            isPremium,
-            channelData: data,
-          })
-        );
-        localStorage.removeItem("selectedVideoId");
-        return newState;
-      });
-    } catch (err) {
-      setState((prev) => ({ ...prev, error: err.message }));
-    } finally {
-      setState((prev) => ({ ...prev, loading: false }));
     }
-  };
+
+    if (!response.ok) {
+      throw new Error(`Error: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    setState((prev) => {
+      const newState = { ...prev, channelData: data };
+      localStorage.setItem(
+        LOCAL_STORAGE_KEY,
+        JSON.stringify({
+          channelName,
+          isPremium,
+          channelData: data,
+        })
+      );
+      localStorage.removeItem("selectedVideoId");
+      return newState;
+    });
+  } catch (err) {
+    setState((prev) => ({ ...prev, error: err.message }));
+  } finally {
+    setState((prev) => ({ ...prev, loading: false }));
+  }
+};
 
   return (
     <div className="channel-info-container">
